@@ -6,8 +6,8 @@ function Navbar({ isOpen, toggleMenu }) {
   return (
     <>
       <header className="relative top-0 left-0 bg-blue-800 text-white p-4 flex justify-between border-b border-white border-opacity-20 items-center z-10">
-        <div className="text-2xl cursor-pointer">
-          <h1>Logo</h1>
+        <div className="text-2xl">
+          <h1 className="text-white">Logo</h1>
         </div>
 
         <div className="cursor-pointer" onClick={toggleMenu}>
@@ -15,22 +15,20 @@ function Navbar({ isOpen, toggleMenu }) {
             <div
               className={`${genericHamburgerLine} ${
                 isOpen
-                  ? "bg-white rotate-45 translate-y-2 opacity-50 group-hover:opacity-100"
-                  : "opacity-50 group-hover:opacity-100"
+                  ? "bg-white rotate-45 translate-y-2 group-hover:opacity-50"
+                  : "group-hover:opacity-50"
+              }`}
+            />
+            <div
+              className={`${genericHamburgerLine} ${
+                isOpen ? "bg-white opacity-0" : "group-hover:opacity-50"
               }`}
             />
             <div
               className={`${genericHamburgerLine} ${
                 isOpen
-                  ? "bg-white opacity-0"
-                  : "opacity-50 group-hover:opacity-100"
-              }`}
-            />
-            <div
-              className={`${genericHamburgerLine} ${
-                isOpen
-                  ? "bg-white -rotate-45 -translate-y-2 opacity-50 group-hover:opacity-100"
-                  : "opacity-50 group-hover:opacity-100"
+                  ? "bg-white -rotate-45 -translate-y-2 group-hover:opacity-50"
+                  : "group-hover:opacity-50"
               }`}
             />
           </button>

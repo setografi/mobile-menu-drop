@@ -5,7 +5,7 @@ function HeroSection({ isOpen }) {
     <>
       <section
         className={`w-full h-svh bg-gray-100 p-8 text-center transform transition-transform duration-300 ease-in-out ${
-          isOpen ? "translate-y-full" : "translate-y-0"
+          isOpen ? "mt-0 translate-y-full" : "mt-0 translate-y-0"
         }`}
       >
         <div className="hero-content">
